@@ -93,4 +93,4 @@ async def batch_tag_management(client: LinodeClient, arguments: Dict[str, Any]) 
         for failed in results["failed"]:
             report_lines.append(f"  ID {failed['id']}: {failed['error']}")
     
-    return [TextContent(type="text", text="\n".join(report_lines))
+    return [TextContent(type="text", text="\n".join(report_lines))]
